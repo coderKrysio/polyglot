@@ -1,0 +1,17 @@
+{
+    "name": "polyglot",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "A basic Chrome extension with Next.js",
+    "action": {
+        "default_popup": "out/index.html"
+    },
+    "permissions": [],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    },
+    "content_script": [{
+        "css": ["js/tailwind.css"],
+        "js": ["js/contentScript.js"]
+    }]
+}
