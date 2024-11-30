@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-const CopyPlugin = require("copy-webpack-plugin");
 
 const nextConfig: NextConfig = {
     output: "export",
@@ -11,16 +10,6 @@ const nextConfig: NextConfig = {
             "static/wasm/[modulehash].wasm";
         return config;
     },
-    plugins: [
-        new CopyPlugin({
-            patterns: [
-                {
-                    from: "src/tailwind.css",
-                    to: "./",
-                },
-            ],
-        }),
-    ],
 };
 
 export default nextConfig;
