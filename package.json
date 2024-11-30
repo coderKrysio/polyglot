@@ -5,6 +5,8 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "export": "next export",
+        "pack": "next build && next export && zip -r extension.zip out",
         "start": "next start",
         "lint": "next lint"
     },
